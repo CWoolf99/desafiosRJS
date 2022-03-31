@@ -1,5 +1,8 @@
 import React from "react"
+
 import { Container, Navbar, Nav} from "react-bootstrap";
+import CartWidget from "./CartWidget";
+
 
 export default function NavbarW () {
   return (
@@ -29,10 +32,9 @@ export default function NavbarW () {
       <Nav.Link eventKey="link-2">Link</Nav.Link>
     </Nav.Item>
     <Nav.Item>
-      <Nav.Link eventKey="link-3" disabled>
-        Link
-      </Nav.Link>
+      <Nav.Link eventKey="link-3">Link</Nav.Link>
     </Nav.Item>
+    <CartWidget/>
   </Nav>
 </>
   );
