@@ -1,5 +1,5 @@
 import React from "react"
-
+import { Link } from "react-router-dom";
 import { Container, Navbar, Nav} from "react-bootstrap";
 import CartWidget from "./CartWidget";
 
@@ -9,7 +9,7 @@ export default function NavbarW () {
     <>
   <Navbar bg="dark" variant="dark">
     <Container className="justify-content-center">
-      <Navbar.Brand href="#home">
+      <Navbar.Brand href="/">
         <img
           alt=""
           src="/logo.png"
@@ -21,18 +21,15 @@ export default function NavbarW () {
       </Navbar.Brand>
     </Container>
   </Navbar>
-  <Nav className="justify-content-center" activeKey="/home">
+  <Nav fill variant="tabs" activeKey="/home">
     <Nav.Item>
-      <Nav.Link href="/home">Inicio</Nav.Link>
+      <Link to='/category/consolas'>Consolas</Link>
     </Nav.Item>
     <Nav.Item>
-      <Nav.Link eventKey="link-1">Link</Nav.Link>
+      <Link to='/category/audifonos'>Audífonos</Link>
     </Nav.Item>
     <Nav.Item>
-      <Nav.Link eventKey="link-2">Link</Nav.Link>
-    </Nav.Item>
-    <Nav.Item>
-      <Nav.Link eventKey="link-3">Link</Nav.Link>
+      <Link to='/category/compusCelulares'>Computadoras y Celulares</Link>
     </Nav.Item>
     <CartWidget/>
   </Nav>
