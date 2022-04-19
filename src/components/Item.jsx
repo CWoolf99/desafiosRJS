@@ -1,5 +1,4 @@
 import React from 'react';
-import ItemCount from './ItemCount';
 import { Card } from "react-bootstrap"
 import { Link } from 'react-router-dom';
 
@@ -17,7 +16,6 @@ export default function Item({produ}){
                     ${produ.precio} <br></br>
                     <Link to={`/item/${produ.id}`}>Ver detalles</Link>
                     </Card.Text>
-                    <ItemCount initial={1} stock={10}/>
                 </Card.Body>
          </Card>
         </>

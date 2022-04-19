@@ -1,5 +1,6 @@
 import React from 'react';
 import {Card, Image} from "react-bootstrap";
+import ItemCount from './ItemCount';
 
 export default function ItemDetail({producto}){
     return(
@@ -14,9 +15,10 @@ export default function ItemDetail({producto}){
                 Id:{producto.id}<br></br>
                 {producto.descripcion}
                 </Card.Text>
+                <ItemCount initial={1} stock={10}/>
             </Card.Body>
             <Card.Footer className="text-muted">
-            <button>Agregar al carrito</button>
+            <button>Ir al carrito</button>
             </Card.Footer>
         </Card>
         </>
