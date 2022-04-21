@@ -15,7 +15,7 @@ export default function ItemDetail({producto}){
                 Id:{producto.id}<br></br>
                 {producto.descripcion}
                 </Card.Text>
-                <ItemCount initial={1} stock={10}/>
+                <ItemCount initial={1} stock={10} producto={producto}/>
             </Card.Body>
             <Card.Footer className="text-muted">
             <button>Ir al carrito</button>

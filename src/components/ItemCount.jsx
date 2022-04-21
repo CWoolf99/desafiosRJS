@@ -1,7 +1,9 @@
 import React, {useState} from "react"
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { CartContext } from "./CartContext";
 
-export default function ItemCount({stock, initial}){
+export default function ItemCount({stock, initial, producto}){
   const [number,setNumber]=useState(0);
     const [cuenta, setcuenta]=useState(initial)
   function mas(){
@@ -12,11 +14,12 @@ export default function ItemCount({stock, initial}){
     if (cuenta>1){
     setcuenta(cuenta-1)}
   }
-
+  const { addToCart } = useContext(CartContext);
   function onAdd(){
     setNumber(cuenta);
+    addToCart({...producto,cuenta});
   }
-  
+
 
     return(
         <>
