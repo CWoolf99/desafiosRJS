@@ -1,19 +1,26 @@
 import React from "react";
 import ItemList from "./ItemList";
 import { Container, Row } from "react-bootstrap";
-import {productosfetch} from "./Products";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { collection , getDocs , getFirestore , query , where} from "firebase/firestore";
 
 export default function ItemListContainer () {
-const {categoryId}=useParams();
+  const [productos,setproductos]=useState([]);
+  const {categoryId}=useParams();
+  useEffect(()=>{
+    const db=getFirestore();
+    let itemsCollection;
+    if(!categoryId){
+      itemsCollection=collection(db,"productos")
+    }else{
+    itemsCollection=query(collection(db,"productos"),where('categoria',"==",categoryId));}
+    getDocs(itemsCollection).then((snapshot)=>{
+        setproductos(snapshot.docs.map((doc)=>({id:doc.id,...doc.data()})));
+    })
+},[categoryId]);
+  
 
-const [productos,setproductos]=useState([]);
-useEffect(()=>{
-    productosfetch(categoryId)
-    .then((resp)=>setproductos(resp))
-    .catch((err)=>console.log(err))
-},[categoryId]);   
   return (
     <>
     <p> Catalogo</p>
