@@ -5,6 +5,7 @@ import NavbarW from "./components/NavbarW"
 import Cart from "./components/Cart"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CartContextProvider from "./components/CartContext";
+import CreateOrder from "./components/CreateOrder";
 
 
 
@@ -18,6 +19,7 @@ export default function App () {
           <Route path="/category/:categoryId" element={<ItemListContainer/>}/>
           <Route path="/Item/:id" element={<ItemDetailContainer/>}/>
           <Route path="/cart" element={<Cart/>}/>
+          <Route path="/endOrder" element={<CreateOrder/>}/>
         </Routes>
       </BrowserRouter>
     </CartContextProvider>
