@@ -1,3 +1,6 @@
+# Demo
+![React](https://user-images.githubusercontent.com/95245934/169115903-de79df2b-4f02-49ac-8b24-b45ee29f2276.gif)
+
 # Proyecto de curso de coderhouse de react js
 Este proyecto es la entrega final para aprobar el curso de coder house y demostrar los conocimientos adquiridos durante el mismo.
 
