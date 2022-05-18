@@ -1,3 +1,26 @@
+# Proyecto de curso de coderhouse de react js
+Este proyecto es la entrega final para aprobar el curso de coder house y demostrar los conocimientos adquiridos durante el mismo.
+
+ ## Mi proyecto
+ Mi proyecto es un ecommerce que a traves de una base de datos genera productos que se pueden agregar a un carrito. Desde dicho carrito se podran realizar pedidos que únicamente registraran los datos del usuario en una base de datos.  
+
+# Bibliotecas
+Se utilizó bootstrap v5.1.3, firebase v9.7.0 y react Router DOM v6.3.0
+
+# Bootstrap
+Para agregar una forma efectiva y coherente al html se utlizó esta biblioteca por sus componente que brindan una solución sencilla y efeciente para el diseño de la página.
+
+# Firebase
+Se utilzó su base de datos tanto como para almacenar mis productos como para guardar ordenes.
+
+# React router dom
+Como parte del curso fue necesario que la app fuera single page por lo que las rutas de esta biblioteca aportaron la solución.
+
+# Agradecimientos 
+Al prof. Guillermo Jorge Fergnani y a mi tuto Manuel Sosa
+
+# Instrucciones para uso de react
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

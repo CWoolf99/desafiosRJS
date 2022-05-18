@@ -1,7 +1,7 @@
-import { addDoc, getFirestore , collection} from "firebase/firestore";
+import { addDoc, getFirestore , collection, serverTimestamp} from "firebase/firestore";
 import React, { useEffect, useState } from "react"
 import { useContext } from "react"
-import { ListGroup, Badge, Alert } from "react-bootstrap";
+import { ListGroup, Badge, } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { CartContext } from "./CartContext";
 
@@ -12,7 +12,7 @@ export default function CreateOrder () {
     const [email,setEmail]=useState("");
     const [name,setName]=useState("");
     const [phone,setPhone]=useState("");
-    const [ide,setIde]=useState("")
+    const [ide,setIde]=useState("");
     useEffect(()=>{
         console.log(name,phone,email)
     },[email,phone,name])
@@ -22,10 +22,12 @@ export default function CreateOrder () {
         const orden={
             buyer: {name,phone,email},
             items: cart,
+            fecha:serverTimestamp(),
             total}
         const db=getFirestore();
         const ordersCollection=collection(db,'ordenes');
-        addDoc(ordersCollection,orden).then(({id})=>setIde(id));
+        addDoc(ordersCollection,orden).then(({id})=>setIde(id))
+        console.log(ide)
         }
   return (
     <>  
