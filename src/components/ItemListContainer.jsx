@@ -23,12 +23,14 @@ export default function ItemListContainer () {
 
   return (
     <>
-    <p> Catalogo</p>
-    <Container>
-      <Row>
-        <ItemList productos={productos}/>
-      </Row>
-    </Container>
+    <div style={{backgroundColor:"lightblue", paddingBottom:"300px"}}>
+      <p style={{fontFamily:"'Bebas Neue', cursive", color:"white", fontSize:"50px"}}> Catalogo</p>
+      <Container>
+        <Row>
+          <ItemList productos={productos}/>
+        </Row>
+      </Container>
+    </div>
     </>
   );
 }

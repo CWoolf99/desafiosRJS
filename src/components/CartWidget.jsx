@@ -1,17 +1,13 @@
-import React from "react"
-import {Image} from "react-bootstrap"
+import React, { useContext } from "react"
+import { Link } from "react-router-dom";
+import { CartContext } from "./CartContext";
 
 
 export default function CartWidget () {
+  const { cartWidget}=useContext(CartContext);
   return (
     <>
-  
-        <Image
-            width={40}
-            height={40}
-            alt="carrito"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQROaec0ayQdKQwT1NWwrhyNoPPodo7HF3qIQ&usqp=CAU"
-        />
+    <Link to="/cart"> 🛒({cartWidget})</Link>
     </>
   );
 }

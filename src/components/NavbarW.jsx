@@ -17,19 +17,19 @@ export default function NavbarW () {
           height="30"
           className="d-inline-block align-top"
         />{' '}
-      CoderTech
+        CoderTech
       </Navbar.Brand>
     </Container>
   </Navbar>
-  <Nav fill variant="tabs" activeKey="/home">
+  <Nav fill variant="tabs" activeKey="/home" style={{backgroundColor:"lightgray"}}>
     <Nav.Item>
-      <Link to='/category/consolas'>Consolas</Link>
+      <Link to='/category/consolas'style={{fontFamily:"'Bebas Neue', cursive", color:"black"}}>Consolas</Link>
     </Nav.Item>
     <Nav.Item>
-      <Link to='/category/audifonos'>Audífonos</Link>
+      <Link to='/category/audifonos'style={{fontFamily:"'Bebas Neue', cursive", color:"black"}}>Audífonos</Link>
     </Nav.Item>
     <Nav.Item>
-      <Link to='/category/compusCelulares'>Computadoras y Celulares</Link>
+      <Link to='/category/compusCelulares'style={{fontFamily:"'Bebas Neue', cursive", color:"black"}}>Computadoras y Celulares</Link>
     </Nav.Item>
     <CartWidget/>
   </Nav>
